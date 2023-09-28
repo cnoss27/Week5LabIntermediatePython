@@ -9,10 +9,9 @@ def StaminaChange(terrain): #define the StaminaChange function
     return Changes.get(terrain , 0)
 
 CharacterInfo = {
-    "CharacterName": ["Arwen", "Frodo", "Gimli", "Legolas"],
-    "Terrain": ["Forest", "Mountain", "Swamp", "Village"],
+    "CharacterName": ["Arwen", "Frodo", "Gimli", "Legolas"], #Set character names
+    "Terrain": ["Forest", "Mountain", "Swamp", "Village"], #set what terrain each character is in
     "InitialStamina": [100, 100, 100, 100],  # Assuming each character starts with 100 stamina
-    "StaminaChange": [0, 0, 0, 0]
     } #enter initial character info
 
 CharacterInfoDF = pd.DataFrame(CharacterInfo) #make the data into a dataframe
