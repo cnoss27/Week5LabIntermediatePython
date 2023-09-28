@@ -20,11 +20,9 @@ CharacterInfoDF = pd.DataFrame(CharacterInfo) #make the data into a dataframe
 for x in range(0 , int(input("How many turns should be simulated? (Answer with an integer 1, 2, etc.):"))): #for inputted number of turns apply the changes and print the information
 
     CharacterInfoDF["StaminaChange"] = CharacterInfoDF["Terrain"].apply(StaminaChange) #applying stamina change
-
     CharacterInfoDF["NewStamina"] = CharacterInfoDF["InitialStamina"] + CharacterInfoDF["StaminaChange"] #Setting new stamina variable
 
     print("Here is the information for turn " , x+1 , ":") #indicating what turn this information is for
-
     print(CharacterInfoDF) #print the information
 
     CharacterInfoDF["InitialStamina"] = CharacterInfoDF["NewStamina"] #set InitialStamina equal to NewStamina to prep for next loop
